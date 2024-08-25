@@ -30,7 +30,7 @@ func Quicksort[C ~[]E, E cmp.Ordered](arr C, l int, r int) {
 }
 
 func partition[C ~[]E, E cmp.Ordered](arr C, l int, r int) int {
-	v := arr[(l+r)/2]
+	v := arr[int(uint((l+r)>>1))]
 	i := l
 	j := r
 	for i <= j {
