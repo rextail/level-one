@@ -10,11 +10,6 @@ import "math/big"
 //Для работы с числами, длина которых превышает машинное слово, команда Rob Pike and Co.
 //Разработала в рамках пакета math пакет big, реализующий длинную арифметику.
 
-//Пример:
-//unsigned int u = 1e9;
-//long signed int i = -1;
-//i + u???
-
 type Test interface {
 	~int | ~float64 | ~uint
 }
