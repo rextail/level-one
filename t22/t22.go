@@ -10,14 +10,6 @@ import "math/big"
 //Для работы с числами, длина которых превышает машинное слово, команда Rob Pike and Co.
 //Разработала в рамках пакета math пакет big, реализующий длинную арифметику.
 
-type Test interface {
-	~int | ~float64 | ~uint
-}
-
-func Add[S Test](a, b S) S {
-	return a + b
-}
-
 func AddFloats(a, b *big.Float) *big.Float {
 	return new(big.Float).Add(a, b)
 }
