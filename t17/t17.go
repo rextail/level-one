@@ -14,7 +14,7 @@ import (
 func BinarySearch[S ~[]E, E cmp.Ordered](arr S, el E) int {
 	l, r := 0, len(arr)
 	for l < r {
-		//>> 1 -> сдвиг вправо на один бит, эквивалентно / 2
+		//>> 1 -> сдвиг вправо на один бит, эквивалентно делению на 2
 		//uint() -> больше бит на хранение положительного числа
 		mid := int(uint(l+r) >> 1)
 		if arr[mid] < el {
